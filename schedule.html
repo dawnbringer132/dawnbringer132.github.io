@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Quản trị Đại học trực tuyến - Trường Đại học Bách Khoa Hà Nội</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header__navbar">
+                <ul class="header__navbar-list">
+                    <div class="header__logo">
+                        <a href="/" class="header__logo-link">
+                            <img src="https://storage.googleapis.com/hust-files/5807675312963584/images/hust-logo-official_.3m.jpeg" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+            
+                    <li class="header__navbar-item header__navbar-item--name">
+                        <p>HỆ THỐNG QUẢN TRỊ ĐẠI HỌC TRỰC TUYẾN</p>
+                        <p>TRƯỜNG ĐẠI HỌC BÁCH KHOA HÀ NỘI - VIỆN SƯ PHẠM KỸ THUẬT</p>
+                    </li>
+                </ul>
+
+                <ul class="header__navbar-list">
+                    <div class="header__time">
+                        <p>Tuần 16 (Tuần học thứ 16): 10/01 - 15/01 </p>
+                    </div>
+                    <div class="header__user">
+                        <a href="#" class="header__user-avatar">
+                            <img src="https://qldt.hust.edu.vn/images/default_avatar.jpg" alt="" class="header__user-avatar-img">
+                        </a>
+                        <a href="#" class="header__user-name">Duong Nguyen</a>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="header__panel">
+                <div class="header__select">
+                    <ul class="header__panel-option">
+                        <button class="header__panel-option--btn">
+                            <a href="home.html">ĐỒ ÁN</a>
+                        </button>
+                    </ul>
+
+                    <ul class="header__panel-option-list">
+                        <li class="option__list-item">
+                            <a href="home.html">Danh sách đồ án</a>
+                        </li>
+                        <li class="option__list-item">
+                            <a href="register.html">Đăng ký nguyện vọng</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="header__panel-option">
+                    <button class="header__panel-option--btn">
+                        <a href="schedule.html">LỊCH HỌC</a>
+                    </button>
+                </ul>
+                <ul class="header__panel-option">
+                    <button class="header__panel-option--btn">
+                        <a href="service.html">DỊCH VỤ CÔNG</a>
+                    </button>
+                </ul>
+                <ul class="header__panel-option">
+                    <button class="header__panel-option--btn">
+                        <a href="profile.html">THÔNG TIN CÁ NHÂN</a>
+                    </button>
+                </ul>
+                <ul class="header__panel-option">
+                    <button class="header__panel-option--btn">
+                        <a href="management.html">QUẢN LÝ SINH VIÊN</a>
+                    </button>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="wrap">
+                <div class="schedule">
+                    <!-- Search -->
+                    <div class="schedule__search">
+                        <div class="schedule__search-input-wrap">
+                            <input type="text" class="schedule__search-input" placeholder="Nhập mã lớp, mã môn hoặc tên môn">
+                        </div>
+                        <!-- <span class="schedule__search-select">
+                            <span class="schedule__search-select-label">Kỳ học</span>
+                                <i class="schedule__search-select-icon fas fa-angle-down"></i>
+                            
+                                <ul class="schedule__search-option">
+                                    <li class="schedule__search-option-item schedule__search-option-item--active">
+                                        <span>20201</span>
+                                        <i class="fas fa-check"></i>
+                                    </li>
+                                    <li class="schedule__search-option-item">
+                                        <span>20202</span>
+                                        <i class="fas fa-check"></i>
+                                    </li>
+                                </ul>
+                            </span>
+                        </div> -->
+                    </div>
+
+                    <!-- Table -->
+                    <p class="schedule__heading">Thời khóa biểu</p>
+                    <div class="schedule__info">
+                        <ul>
+                            <li class="category">
+                                <p class="category__num">STT</p>
+                                <p class="category__sub">Học phần</p>
+                                <p class="category__type">Hình thức GD</p>
+                                <p class="category__grade">Điểm</p>
+                                <p class="category__time">Lịch học</p>
+                                <p class="category__absent">Vắng</p>
+                                <p class="category__teach">Giảng viên</p>
+                            </li>
+
+                            <li class="first-project">
+                                <p class="project__num">1</p>
+                                <p class="project__sub">Giải tích 1</p>
+                                <p class="project__type">Offline</p>
+                                <p class="project__grade">9</p>
+                                <p class="project__time">Sáng T5 Tuần 1-8</p>
+                                <p class="project__absent">1</p>
+                                <p class="project__teach">Nguyễn Dương</p>
+                            </li>
+
+                            <li class="first-project">
+                                <p class="project__num">2</p>
+                                <p class="project__sub">Giải tích 2</p>
+                                <p class="project__type">Offline</p>
+                                <p class="project__grade">8</p>
+                                <p class="project__time">Chiều T5 Tuần 1-8</p>
+                                <p class="project__absent">0</p>
+                                <p class="project__teach">Trần Văn Nam</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer">
+                <img src="./assets/img/bottom.PNG" alt="" class="footer-img">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

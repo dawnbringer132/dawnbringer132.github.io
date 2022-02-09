@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Quản trị Đại học trực tuyến - Trường Đại học Bách Khoa Hà Nội</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Năm', 'CPA', 'GPA'],
+          ['2017',  1.6,      1.8],
+          ['2018',  1.8,      1.9],
+          ['2019',  2.0,      2.5],
+          ['2020',  2.5,      3.0],
+        ]);
+
+        var options = {
+          title : 'Biểu đồ học tập',
+          vAxis: {title: 'TC tích lũy'},
+          hAxis: {title: 'Năm'},
+          seriesType: 'bars',
+          series: {2: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Năm', 'Điểm rèn luyện'],
+        ['2017',  60],
+        ['2018',  80],
+        ['2019',  75],
+        ['2020',  95]
+      ]);
+
+      var options = {
+        title: 'Điểm rèn luyện',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header__navbar">
+                <ul class="header__navbar-list">
+                    <div class="header__logo">
+                        <a href="/" class="header__logo-link">
+                            <img src="https://storage.googleapis.com/hust-files/5807675312963584/images/hust-logo-official_.3m.jpeg" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+            
+                    <li class="header__navbar-item header__navbar-item--name">
+                        <p>HỆ THỐNG QUẢN TRỊ ĐẠI HỌC TRỰC TUYẾN</p>
+                        <p>TRƯỜNG ĐẠI HỌC BÁCH KHOA HÀ NỘI - VIỆN SƯ PHẠM KỸ THUẬT</p>
+                    </li>
+                </ul>
+
+                <ul class="header__navbar-list header__navbar-list--user">
+                    <div class="header__welcome">
+                        <p>Xin chào,</p>
+                    </div>
+                    <div class="header__user">
+                        <a href="#" class="header__user-avatar">
+                            <img src="https://qldt.hust.edu.vn/images/default_avatar.jpg" alt="" class="header__user-avatar-img">
+                        </a>
+                        <a href="#" class="header__user-name">Duong Nguyen</a>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="header__panel">
+                <div class="header__select">
+                    <ul class="header__panel-option">
+                        <button class="header__panel-option--btn">
+                            <a href="home.html">ĐỒ ÁN</a>
+                        </button>
+                    </ul>
+
+                    <ul class="header__panel-option-list">
+                        <li class="option__list-item">
+                            <a href="home.html">Danh sách đồ án</a>
+                        </li>
+                        <li class="option__list-item">
+                            <a href="register.html">Đăng ký nguyện vọng</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="header__panel-option">
+                    <button class="header__panel-option--btn">
+                        <a href="schedule.html">LỊCH HỌC</a>
+                    </button>
+                </ul>
+                <ul class="header__panel-option">
+                    <button class="header__panel-option--btn">
+                        <a href="service.html">DỊCH VỤ CÔNG</a>
+                    </button>
+                </ul>
+                <ul class="header__panel-option">
+                    <button class="header__panel-option--btn">
+                        <a href="profile.html">THÔNG TIN CÁ NHÂN</a>
+                    </button>
+                </ul>
+                <ul class="header__panel-option">
+                    <button class="header__panel-option--btn">
+                        <a href="management.html">QUẢN LÝ SINH VIÊN</a>
+                    </button>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="profile-wrap">
+                <div class="profile-form">
+                    <p class="profile__heading">Thông tin cá nhân sinh viên</p>
+
+                    <img src="./assets/img/profile.PNG" alt="/" class="profile-img">
+                    <div id="chart_div" style="width: auto; height: 400px;"></div>
+                    <div id="curve_chart" style="width: auto; height: 400px"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer">
+                <img src="./assets/img/bottom.PNG" alt="" class="footer-img">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
